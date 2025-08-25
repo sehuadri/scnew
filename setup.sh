@@ -287,7 +287,15 @@ wget ${REPO}sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
 }
 res7() {
-wget ${REPO}menu/update.sh && chmod +x update.sh && ./update.sh
+wget -q ${REPO}menu/menu.zip
+unzip -P miqdad12 menu.zip
+chmod +x menu/*
+mv menu/* /usr/local/sbin
+sleep 2
+sudo dos2unix /usr/local/sbin/*
+
+rm -rf menu
+rm -rf menu.zip
 clear
 }
 res8() {

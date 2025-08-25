@@ -507,6 +507,12 @@ rm /root/ohp.sh >/dev/null 2>&1
 rm /root/update.sh >/dev/null 2>&1
 rm /root/installsl.sh >/dev/null 2>&1
 rm /root/udp-custom.sh >/dev/null 2>&1
+rm -rf /root/menu
+rm -rf /root/*.zip
+rm -rf /root/*.sh
+rm -rf /root/LICENSE
+rm -rf /root/README.md
+rm -rf /root/domain
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 sleep 3
 echo  ""

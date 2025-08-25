@@ -5,7 +5,7 @@ file_path="/etc/handeling"
 # Cek apakah file ada
 if [ ! -f "$file_path" ]; then
     # Jika file tidak ada, buat file dan isi dengan dua baris
-    echo -e "PeyxDev Server Connected\nBLUE" | sudo tee "$file_path" > /dev/null
+    echo -e "cloudvpn\nBLUE" | sudo tee "$file_path" > /dev/null
     echo "File '$file_path' berhasil dibuat."
 else
     # Jika file ada, cek apakah isinya kosong

@@ -1,9 +1,9 @@
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
-REPO="https://raw.githubusercontent.com/vip23-px/scnew/main/"
+REPO="https://raw.githubusercontent.com/sehuadri/scnew/main/"
 function CEKIP () {
 MYIP=$(curl -sS ipv4.icanhazip.com)
-IPVPS=$(curl -sS https://raw.githubusercontent.com/vip23-px/scnew/main/ipx | grep $MYIP | awk '{print $4}')
+IPVPS=$(curl -sS https://raw.githubusercontent.com/sehuadri/scnew/main/ipx | grep $MYIP | awk '{print $4}')
 if [[ $MYIP == $IPVPS ]]; then
 domain
 Pasang
@@ -298,6 +298,17 @@ res9() {
 wget ${REPO}install/udp-custom.sh && chmod +x udp-custom.sh && bash udp-custom.sh
 clear
 }
+res10() {
+wget ${REPO}noobzvpns.zip
+unzip noobzvpns.zip
+rm -rf noobzvpns.zip noobzvpns.zip.1 noobzvpns.zip.2 noobzvpns.zip.3 noobzvpns.zip.4
+cd noobzvpns
+chmod +x install.sh
+./install.sh
+systemctl start noobzvpns
+systemctl restart noobzvpns
+clear
+}
 if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
 echo -e "${green}Setup nginx For OS Is $(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')${NC}"
 setup_ubuntu
@@ -375,12 +386,16 @@ echo -e "${green}┌────────────────────
 echo -e "${green}│           DOWNLOAD UDP COSTUM            │${NC}"
 echo -e "${green}└──────────────────────────────────────────┘${NC}"
 res9
+echo -e "${green}┌──────────────────────────────────────────┐${NC}"
+echo -e "${green}│           DOWNLOAD NOOBZVPNS             │${NC}"
+echo -e "${green}└──────────────────────────────────────────┘${NC}"
+res10
 }
 function iinfo(){
 domain=$(cat /etc/xray/domain)
 TIMES="10"
-CHATID="7661292905"
-KEY="7339190471:AAGXSY1F_fzJo4SBqHjqeF8HdR4t9AnIMKs"
+CHATID="1486508882"
+KEY="7286072978:AAF6JRoH86zg5UAQeHKrpIviAICDc-vJxDU"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
@@ -389,7 +404,7 @@ TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
 MODEL2=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 MYIP=$(curl -sS ipv4.icanhazip.com)
-IZIN=$(curl -sS https://raw.githubusercontent.com/vip23-px/scnew/main/ipx | grep $MYIP | awk '{print $3}' )
+IZIN=$(curl -sS https://raw.githubusercontent.com/sehuadri/scnew/main/ipx | grep $MYIP | awk '{print $3}' )
 d1=$(date -d "$IZIN" +%s)
 d2=$(date -d "$today" +%s)
 EXP=$(( (d1 - d2) / 86400 ))

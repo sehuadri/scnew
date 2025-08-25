@@ -53,14 +53,53 @@ echo -e "[ ${green}INFO$NC ] Downloading & Installing xray core"
 domainSock_dir="/run/xray";! [ -d $domainSock_dir ] && mkdir  $domainSock_dir
 chown www-data.www-data $domainSock_dir
 # Make Folder XRay
-mkdir -p /var/log/xray
-mkdir -p /etc/xray
-chown www-data.www-data /var/log/xray
-chmod +x /var/log/xray
-touch /var/log/xray/access.log
-touch /var/log/xray/error.log
-touch /var/log/xray/access2.log
-touch /var/log/xray/error2.log
+rm -rf /etc/user_locks.db
+    rm -rf /etc/ssh/.ssh.db
+    rm -rf /etc/vmess/.vmess.db
+    rm -rf /etc/vless/.vless.db
+    rm -rf /etc/trojan/.trojan.db
+    rm -rf /etc/shadowsocks/.shadowsocks.db
+    rm -rf /etc/bot/.bot.db
+    rm -rf /etc/user-create/user.log
+    mkdir -p /etc/bot
+    mkdir -p /etc/ssh
+    mkdir -p /etc/xray
+    mkdir -p /etc/vmess
+    mkdir -p /etc/vless
+    mkdir -p /etc/trojan
+    mkdir -p /etc/shadowsocks
+    mkdir -p /usr/bin/xray/
+    mkdir -p /var/log/xray/
+    mkdir -p /var/www/html
+    mkdir -p /etc/limit/ssh/ip
+    mkdir -p /etc/limit/vmess/ip
+    mkdir -p /etc/limit/vless/ip
+    mkdir -p /etc/limit/trojan/ip
+    mkdir -p /etc/limit/shadowsocks/ip
+    mkdir -p /etc/limit/ssh/
+    mkdir -p /etc/limit/vmess
+    mkdir -p /etc/limit/vless
+    mkdir -p /etc/limit/trojan
+    mkdir -p /etc/limit/shadowsocks
+    mkdir -p /etc/user-create
+    chmod +x /var/log/xray
+    touch /etc/xray/domain
+    touch /etc/user_locks.db
+    touch /var/log/xray/access.log
+    touch /var/log/xray/error.log
+    touch /etc/ssh/.ssh.db
+    touch /etc/vmess/.vmess.db
+    touch /etc/vless/.vless.db
+    touch /etc/trojan/.trojan.db
+    touch /etc/shadowsocks/.shadowsocks.db
+    touch /etc/bot/.bot.db
+    chmod 644 /etc/user_locks.db
+    echo "& plughin Account" >>/etc/ssh/.ssh.db
+    echo "& plughin Account" >>/etc/vmess/.vmess.db
+    echo "& plughin Account" >>/etc/vless/.vless.db
+    echo "& plughin Account" >>/etc/trojan/.trojan.db
+    echo "& plughin Account" >>/etc/shadowsocks/.shadowsocks.db
+    echo "echo -e 'Vps Config User Account'" >> /etc/user-create/user.log
 # / / Ambil Xray Core Version Terbaru
 latest_version="24.11.30"
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version $latest_version

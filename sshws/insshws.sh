@@ -21,7 +21,7 @@ fi
 # Link Hosting Kalian
 sudo apt install python3
 
-wget -O /usr/local/bin/ws "http://raw.githubusercontent.com/vip23-px/scnew/sshws/ws"
+wget -O /usr/local/bin/ws "http://raw.githubusercontent.com/sehuadri/scnew/main/sshws/ws"
 chmod +x /usr/local/bin/ws
 
 # Installing Service
@@ -49,7 +49,7 @@ systemctl enable ws.service
 systemctl start ws.service
 systemctl restart ws.service
 
-wget -O /usr/local/bin/ws-ovpn "http://myrid.my.id/os/sshws/ws"
+wget -O /usr/local/bin/ws-ovpn "http://raw.githubusercontent.com/sehuadri/scnew/main/sshws/ws"
 chmod +x /usr/local/bin/ws-ovpn
 
 # Installing Service

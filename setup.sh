@@ -282,10 +282,10 @@ res5() {
 wget ${REPO}install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
 }
-res6() {
-wget ${REPO}sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-clear
-}
+#res6() {
+#wget ${REPO}sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+#clear
+#}
 res7() {
 wget -q ${REPO}menu/menu.zip
 unzip -P miqdad12 menu.zip
@@ -298,10 +298,10 @@ rm -rf menu
 rm -rf menu.zip
 clear
 }
-res8() {
-wget ${REPO}slowdns/installsl.sh && chmod +x installsl.sh && bash installsl.sh
-clear
-}
+#res8() {
+#wget ${REPO}slowdns/installsl.sh && chmod +x installsl.sh && bash installsl.sh
+#clear
+#}
 res9() {
 wget ${REPO}install/udp-custom.sh && chmod +x udp-custom.sh && bash udp-custom.sh
 clear
@@ -344,18 +344,18 @@ echo -e "${green}┌────────────────────
 echo -e "${green}│       PROCESS INSTALLED BACKUP MENU      │${NC}"
 echo -e "${green}└──────────────────────────────────────────┘${NC}"
 fun_bar 'res5'
-echo -e "${green}┌──────────────────────────────────────────┐${NC}"
-echo -e "${green}│           PROCESS INSTALLED OHP          │${NC}"
-echo -e "${green}└──────────────────────────────────────────┘${NC}"
-fun_bar 'res6'
+#echo -e "${green}┌──────────────────────────────────────────┐${NC}"
+#echo -e "${green}│           PROCESS INSTALLED OHP          │${NC}"
+#echo -e "${green}└──────────────────────────────────────────┘${NC}"
+#fun_bar 'res6'
 echo -e "${green}┌──────────────────────────────────────────┐${NC}"
 echo -e "${green}│           DOWNLOAD EXTRA MENU            │${NC}"
 echo -e "${green}└──────────────────────────────────────────┘${NC}"
 fun_bar 'res7'
-echo -e "${green}┌──────────────────────────────────────────┐${NC}"
-echo -e "${green}│           DOWNLOAD SYSTEM                │${NC}"
-echo -e "${green}└──────────────────────────────────────────┘${NC}"
-fun_bar 'res8'
+#echo -e "${green}┌──────────────────────────────────────────┐${NC}"
+#echo -e "${green}│           DOWNLOAD SYSTEM                │${NC}"
+#echo -e "${green}└──────────────────────────────────────────┘${NC}"
+#fun_bar 'res8'
 echo -e "${green}┌──────────────────────────────────────────┐${NC}"
 echo -e "${green}│           DOWNLOAD UDP COSTUM            │${NC}"
 echo -e "${green}└──────────────────────────────────────────┘${NC}"
@@ -378,18 +378,18 @@ echo -e "${green}┌────────────────────
 echo -e "${green}│       PROCESS INSTALLED BACKUP MENU      │${NC}"
 echo -e "${green}└──────────────────────────────────────────┘${NC}"
 res5
-echo -e "${green}┌──────────────────────────────────────────┐${NC}"
-echo -e "${green}│           PROCESS INSTALLED OHP          │${NC}"
-echo -e "${green}└──────────────────────────────────────────┘${NC}"
-res6
+#echo -e "${green}┌──────────────────────────────────────────┐${NC}"
+#echo -e "${green}│           PROCESS INSTALLED OHP          │${NC}"
+#echo -e "${green}└──────────────────────────────────────────┘${NC}"
+#res6
 echo -e "${green}┌──────────────────────────────────────────┐${NC}"
 echo -e "${green}│           DOWNLOAD EXTRA MENU            │${NC}"
 echo -e "${green}└──────────────────────────────────────────┘${NC}"
 res7
-echo -e "${green}┌──────────────────────────────────────────┐${NC}"
-echo -e "${green}│           DOWNLOAD SYSTEM                │${NC}"
-echo -e "${green}└──────────────────────────────────────────┘${NC}"
-res8
+#echo -e "${green}┌──────────────────────────────────────────┐${NC}"
+#echo -e "${green}│           DOWNLOAD SYSTEM                │${NC}"
+#echo -e "${green}└──────────────────────────────────────────┘${NC}"
+#res8
 echo -e "${green}┌──────────────────────────────────────────┐${NC}"
 echo -e "${green}│           DOWNLOAD UDP COSTUM            │${NC}"
 echo -e "${green}└──────────────────────────────────────────┘${NC}"
@@ -503,16 +503,10 @@ rm /root/ssh-vpn.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
 rm /root/set-br.sh >/dev/null 2>&1
-rm /root/ohp.sh >/dev/null 2>&1
-rm /root/update.sh >/dev/null 2>&1
-rm /root/installsl.sh >/dev/null 2>&1
+#rm /root/ohp.sh >/dev/null 2>&1
+#rm /root/update.sh >/dev/null 2>&1
+#rm /root/installsl.sh >/dev/null 2>&1
 rm /root/udp-custom.sh >/dev/null 2>&1
-rm -rf /root/menu
-rm -rf /root/*.zip
-rm -rf /root/*.sh
-rm -rf /root/LICENSE
-rm -rf /root/README.md
-rm -rf /root/domain
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 sleep 3
 echo  ""

@@ -1,5 +1,5 @@
 <h1 align="center">
-<h1 align="center">Autoscript Tunneling vip By Peyx
+<h1 align="center">Autoscript premium by sporty
       </p>
   <p align="center">  
     <img src="https://user-images.githubusercontent.com/76937659/153705486-44e6c1b2-74fa-4d44-be1c-36c8fdb83331.gif"/>  
@@ -9,7 +9,8 @@
 </p>
 
 ### INSTALL SCRIPT 
-<pre><code>apt install screen -y && apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q https://raw.githubusercontent.com/vip23-px/scnew/main/setup.sh && chmod +x setup.sh && ./setup.sh
+<pre><code>apt update && apt upgrade -y && wget -q -O setup "https://raw.githubusercontent.com/sehuadri/scnew/main/setup.sh" && chmod +x setup && ./setup
+
 
 </code></pre>
 

@@ -3,7 +3,7 @@ sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 REPO="https://raw.githubusercontent.com/sehuadri/scnew/main/"
 function CEKIP () {
 MYIP=$(curl -sS ipv4.icanhazip.com)
-IPVPS=$(curl -sS https://raw.githubusercontent.com/sehuadri/project/main/ip | grep $MYIP | awk '{print $4}')
+IPVPS=$(curl -sS https://raw.githubusercontent.com/sehuadri/scnew/main/ip | grep $MYIP | awk '{print $4}')
 if [[ $MYIP == $IPVPS ]]; then
 domain
 Pasang
@@ -287,15 +287,7 @@ clear
 #clear
 #}
 res7() {
-wget -q ${REPO}menu/menu.zip
-unzip -P miqdad12 menu.zip
-chmod +x menu/*
-mv menu/* /usr/local/sbin
-sleep 2
-sudo dos2unix /usr/local/sbin/*
-
-rm -rf menu
-rm -rf menu.zip
+wget ${REPO2}menu/update.sh && chmod +x update.sh && ./update.sh
 clear
 }
 #res8() {
@@ -412,7 +404,7 @@ TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
 MODEL2=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 MYIP=$(curl -sS ipv4.icanhazip.com)
-IZIN=$(curl -sS https://raw.githubusercontent.com/sehuadri/scnew/main/ipx | grep $MYIP | awk '{print $3}' )
+IZIN=$(curl -sS https://raw.githubusercontent.com/sehuadri/scnew/main/ip | grep $MYIP | awk '{print $3}' )
 d1=$(date -d "$IZIN" +%s)
 d2=$(date -d "$today" +%s)
 EXP=$(( (d1 - d2) / 86400 ))
@@ -504,7 +496,7 @@ rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
 rm /root/set-br.sh >/dev/null 2>&1
 #rm /root/ohp.sh >/dev/null 2>&1
-#rm /root/update.sh >/dev/null 2>&1
+rm /root/update.sh >/dev/null 2>&1
 #rm /root/installsl.sh >/dev/null 2>&1
 rm /root/udp-custom.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt

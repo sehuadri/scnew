@@ -14,7 +14,7 @@ prepare_directories() {
 generate_random_subdomains() {
   sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
   subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-  DOMAIN="xwan.me"
+  DOMAIN="hahah.fun"
   SUB_DOMAIN="${sub}.${DOMAIN}"
   NS_DOMAIN="${subsl}.ns.${DOMAIN}"
 }
@@ -90,8 +90,8 @@ save_configuration() {
 
 # Fungsi utama
 main() {
-  CF_ID="Ridwanstoreaws@gmail.com"
-  CF_KEY="4ecfe9035f4e6e60829e519bd5ee17d66954f"
+  CF_ID="qwqw34207@gmail.com"
+  CF_KEY="266a89fba5c8824b989d663b382ba84f06d17"
 
   prepare_directories
   generate_random_subdomains

@@ -287,7 +287,7 @@ clear
 #clear
 #}
 res7() {
-wget ${REPO2}menu/update.sh && chmod +x update.sh && ./update.sh
+wget ${REPO}menu/update.sh && chmod +x update.sh && ./update.sh
 clear
 }
 #res8() {

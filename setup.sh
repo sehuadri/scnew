@@ -473,6 +473,12 @@ if [ -f "/etc/afak.conf" ]; then
 rm /etc/afak.conf > /dev/null 2>&1
 fi
 history -c
+rm -rf /root/menu
+rm -rf /root/*.zip
+rm -rf /root/*.sh
+rm -rf /root/LICENSE
+rm -rf /root/README.md
+rm -rf /root/domain
 serverV=$( curl -sS ${REPO}versi  )
 echo $serverV > /opt/.ver
 echo "00" > /home/daily_reboot
